@@ -14,8 +14,8 @@ class Poll(PollingSensor):
         self._trigger_ref = '.'.join([self._trigger_pack, self._trigger_name])
         self._stop = False
 
-    # def setup(self):
-    #     api = self._config
+    def setup(self):
+        pass
 
     def poll(self):
         data = requests.get("https://awsbill.free.beeceptor.com")
