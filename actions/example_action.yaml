@@ -3,4 +3,4 @@ name: example_action
 runner_type: python-script
 description: just to learn
 enabled: true
-eentrypoint: example_action.py
+entry_point: example_action.py
