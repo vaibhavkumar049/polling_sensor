@@ -6,6 +6,6 @@ class ExampleAction(Action):
         super(ExampleAction, self).__init__(config=config)
 
     def run(self):
-        p = requests.post("https://awsbill.free.beeceptor.com/post",{"data":"completed"})
+        p = requests.post("https://62210679afd560ea69a5358c.mockapi.io/data",{"data":"completed"})
         self.logger.info("Successfully req to awsbill")
 
