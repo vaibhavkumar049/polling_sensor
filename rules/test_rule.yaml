@@ -1,0 +1,10 @@
+---
+name: test_rule
+description: test rule
+enabled: true
+
+trigger:
+  type: polling_sesnor.example_trigger
+
+action:
+  ref: polling_sesnor.example_action
