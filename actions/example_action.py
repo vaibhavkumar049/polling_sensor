@@ -6,6 +6,11 @@ class ExampleAction(Action):
         super(ExampleAction, self).__init__(config=config)
 
     def run(self):
-        p = requests.post("https://62210679afd560ea69a5358c.mockapi.io/data",{"data":"completed"})
+        data = {
+            "data": "string",
+            "status":"pending",
+            "rule": "rule3"
+        }
+        p = requests.post("http://127.0.0.1:5000/order",data)
         self.logger.info("Successfully req to awsbill")
 

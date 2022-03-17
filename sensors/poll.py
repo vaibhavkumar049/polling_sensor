@@ -18,7 +18,7 @@ class Poll(PollingSensor):
         pass
 
     def poll(self):
-        data = requests.get("https://62210679afd560ea69a5358c.mockapi.io/data")
+        data = requests.get("http://127.0.0.1:5000/orders/pending")
         if data.json()["data"] == 5:
             self._dispatch_trigger()
 
