@@ -18,7 +18,7 @@ class Poll(PollingSensor):
         pass
 
     def poll(self):
-        data = requests.get("http://127.0.0.1:5000/orders/pending")
+        data = requests.get("http://f531-43-252-251-77.ngrok.io/orders/pending")
         if data.json()["data"] == 5:
             self._dispatch_trigger()
 
