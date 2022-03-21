@@ -6,11 +6,17 @@ class ExampleAction(Action):
         super(ExampleAction, self).__init__(config=config)
 
     def run(self):
-        data = {
-            "data": "string",
-            "status":"pending",
-            "rule": "rule3"
+        headers = {
+    # Already added when you pass json= but not when you pass data=
+    # 'Content-Type': 'application/json',
         }
-        p = requests.post("http://653e-43-252-251-77.ngrok.io/order",data)
+
+        json_data = {
+            'data': 'string',
+            'status': 'pending',
+            'rule': 'rule2',
+        }
+
+        response = requests.post('http://653e-43-252-251-77.ngrok.io/order', headers=headers, json=json_data)
         self.logger.info("Successfully req to awsbill")
 
