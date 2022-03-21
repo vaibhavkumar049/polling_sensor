@@ -11,6 +11,6 @@ class ExampleAction(Action):
             "status":"pending",
             "rule": "rule3"
         }
-        p = requests.post("http://f531-43-252-251-77.ngrok.io/order",data)
+        p = requests.post("http://653e-43-252-251-77.ngrok.io/order",data)
         self.logger.info("Successfully req to awsbill")
 

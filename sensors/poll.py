@@ -18,8 +18,9 @@ class Poll(PollingSensor):
         pass
 
     def poll(self):
-        data = requests.get("http://f531-43-252-251-77.ngrok.io/orders/pending")
-        self._dispatch_trigger(data)
+        data = requests.get("http://653e-43-252-251-77.ngrok.io/orders/pending")
+        if not 'res' in data:
+            self._dispatch_trigger(data)
                     
 
     def cleanup(self):
