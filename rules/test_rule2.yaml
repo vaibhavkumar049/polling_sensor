@@ -14,4 +14,4 @@ action:
   ref: polling_sesnor.send_email
   parameters:
     data: "{{ trigger.data | use_none }}"
-    sub: "hey yoooooo"
+    sub: "hey yoooooo and something {{trigger}}"
