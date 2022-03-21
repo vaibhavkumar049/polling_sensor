@@ -19,8 +19,8 @@ class Poll(PollingSensor):
 
     def poll(self):
         data = requests.get("http://f531-43-252-251-77.ngrok.io/orders/pending")
-        if data.json()["data"] == 5:
-            self._dispatch_trigger()
+        self._dispatch_trigger(data)
+                    
 
     def cleanup(self):
         pass
@@ -34,10 +34,8 @@ class Poll(PollingSensor):
     def remove_trigger(self, trigger):
         pass
     
-    def _dispatch_trigger(self):
+    def _dispatch_trigger(self, payload):
         trigger = self._trigger_ref
-        payload = {}
-        payload["data"] = "completed"
         self._logger.debug('Found the api level Dispatching trigger: %s', payload)
         self._sensor_service.dispatch(trigger, payload)
 

@@ -1,0 +1,6 @@
+---
+name: send_email
+runner_type: python-script
+description: just to learn
+enabled: true
+entry_point: send_mail.py
