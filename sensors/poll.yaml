@@ -9,6 +9,3 @@
         description: "learn trigger by this example"
         payload_schema:
           type: "object"
-          properties:
-            data:
-              type: "object"
