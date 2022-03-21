@@ -13,5 +13,5 @@ criteria:
 action:
   ref: polling_sesnor.send_email
   parameters:
-    data: "{{ trigger.payload.data }}"
+    data: "{{ trigger.data | use_none }}"
     sub: "hey yoooooo"
