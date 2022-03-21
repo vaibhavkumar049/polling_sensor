@@ -11,7 +11,7 @@ class SendEmail(Action):
         gmail_password = '4Saurav@90'
 
         sent_from = gmail_user
-        to = ['vaibhav.chaudhary@ivedha.com']
+        to = 'vaibhav.chaudhary@ivedha.com'
         subject = data
         body = 'sent from stackstorm'
 
@@ -21,7 +21,7 @@ class SendEmail(Action):
         Subject: %s
 
         %s
-        """ % (sent_from, ", ".join(to), subject, body)
+        """ % (sent_from, to, subject, body)
 
         try:
             server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
