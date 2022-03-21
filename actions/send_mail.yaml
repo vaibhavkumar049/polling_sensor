@@ -7,3 +7,5 @@ entry_point: send_mail.py
 parameters:
   data:
     type: "string"
+  sub:
+    type: "string"

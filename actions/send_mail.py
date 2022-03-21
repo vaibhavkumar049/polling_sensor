@@ -6,14 +6,14 @@ class SendEmail(Action):
     def __init__(self, config) -> None:
         super(SendEmail, self).__init__(config=config)
 
-    def run(self, data):
+    def run(self, data, sub):
         gmail_user = 'vaibhavpicdump@gmail.com'
         gmail_password = '4Saurav@90'
 
         sent_from = gmail_user
         to = 'vaibhav.chaudhary@ivedha.com'
         subject = data
-        body = 'sent from stackstorm'
+        body = sub
 
         email_text = """\
         From: %s

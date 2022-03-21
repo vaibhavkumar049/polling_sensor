@@ -14,3 +14,4 @@ action:
   ref: polling_sesnor.send_email
   parameters:
     data: "{{ trigger.data }}"
+    sub: "hey yoooooo"
