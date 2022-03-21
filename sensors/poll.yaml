@@ -9,3 +9,10 @@
         description: "learn trigger by this example"
         payload_schema:
           type: "object"
+          properties:
+            data:
+              type: "string"
+            rule:
+              type: "string"
+            status:
+              type: "string"

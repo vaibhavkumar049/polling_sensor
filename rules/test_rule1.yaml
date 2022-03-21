@@ -7,7 +7,7 @@ trigger:
   type: polling_sesnor.example_trigger
 
 criteria:
-  trigger.payload.rule:
+  trigger.rule:
     type: "equals"
     pattern: "rule1"
     

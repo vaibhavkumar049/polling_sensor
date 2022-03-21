@@ -12,7 +12,7 @@ class SendEmail(Action):
 
         sent_from = gmail_user
         to = ['vaibhav.chaudhary@ivedha.com']
-        subject = data['data']
+        subject = data
         body = 'sent from stackstorm'
 
         email_text = """\
